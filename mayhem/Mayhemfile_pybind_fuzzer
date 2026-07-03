@@ -1,0 +1,9 @@
+project: savantenvs/pybind11
+target: pybind_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pybind_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/pybind_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/pybind_fuzzer.dict
